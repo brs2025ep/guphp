@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "d802ba8b-ff25-4dd6-bd76-d77e951e23d5",
+		"name": "LARAVEL-guphp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40885697"
+	},
+	"item": [
+		{
+			"name": "GetCustomers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/customers"
+			},
+			"response": [
+				{
+					"name": "CustomersList",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/customers"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jan 2025 23:44:29 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"username\": \"NovoCliente\",\n        \"email\": \"novo.cliente@example.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2025-01-12T23:36:30.000000Z\",\n        \"updated_at\": \"2025-01-12T23:36:30.000000Z\"\n    },\n    {\n        \"id\": 2,\n        \"username\": \"NovoCliente2\",\n        \"email\": \"novo.cliente3@example.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2025-01-12T23:38:25.000000Z\",\n        \"updated_at\": \"2025-01-12T23:38:25.000000Z\"\n    },\n    {\n        \"id\": 3,\n        \"username\": \"NovoCliente3\",\n        \"email\": \"novo.clientep3@example.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2025-01-12T23:43:00.000000Z\",\n        \"updated_at\": \"2025-01-12T23:43:00.000000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "RegisterCustomer",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"NovoCliente5\",\r\n  \"email\": \"novo.cliente5@example.com\",\r\n  \"password\": \"senha543\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/customers/"
+			},
+			"response": [
+				{
+					"name": "RegisterCustomer2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"NovoCliente3\",\r\n  \"email\": \"novo.clientep3@example.com\",\r\n  \"password\": \"senha12343\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/customers/"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jan 2025 23:43:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"NovoCliente3\",\n    \"email\": \"novo.clientep3@example.com\",\n    \"updated_at\": \"2025-01-12T23:43:00.000000Z\",\n    \"created_at\": \"2025-01-12T23:43:00.000000Z\",\n    \"id\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "UpdateCustomerById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Dona Florinda\",\r\n  \"email\": \"donaflorinda@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/customers/2"
+			},
+			"response": [
+				{
+					"name": "Customer2Updated",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Dona Florinda\",\r\n  \"email\": \"donaflorinda@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/customers/2"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jan 2025 23:47:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"username\": \"Dona Florinda\",\n    \"email\": \"donaflorinda@example.com\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2025-01-12T23:38:25.000000Z\",\n    \"updated_at\": \"2025-01-12T23:47:44.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "DeleteCustomerById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/customers/4"
+			},
+			"response": [
+				{
+					"name": "DeleteCustomerResponse",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8000/api/customers/4"
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 12 Jan 2025 23:50:37 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
